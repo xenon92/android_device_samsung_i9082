@@ -60,6 +60,9 @@ BOARD_HAVE_SAMSUNG_WIFI := true
 # SkTextBox for libtvout
 BOARD_USES_SKTEXTBOX := true
 
+# assert
+TARGET_OTA_ASSERT_DEVICE := baffin,i9082,GT-I9082,I9082
+
 # Hardware rendering
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/samsung/i9082/egl.cfg
