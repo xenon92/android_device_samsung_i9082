@@ -30,9 +30,6 @@ $(call inherit-product, vendor/slim/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/i9082/full_i9082.mk)
 
-# Inherit torch settings
-$(call inherit-product, vendor/slim/config/common_ledflash.mk)
-
 #bootanimation
  PRODUCT_COPY_FILES +=  \
      vendor/slim/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip
