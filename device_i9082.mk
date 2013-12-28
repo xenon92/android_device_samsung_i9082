@@ -110,6 +110,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Dalvik heap config
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
 
+# Set higher heap size
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heaptargetutilization=0.75 \
+
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
