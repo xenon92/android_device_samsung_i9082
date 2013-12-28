@@ -23,16 +23,15 @@ PRODUCT_RELEASE_NAME := GT-I9082
 # Bootanimation
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
+PRODUCT_COPY_FILES +=  \
+     vendor/slim/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip
+
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/i9082/full_i9082.mk)
-
-#bootanimation
- PRODUCT_COPY_FILES +=  \
-     vendor/slim/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := i9082
