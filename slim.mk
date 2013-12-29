@@ -24,7 +24,7 @@ PRODUCT_RELEASE_NAME := GT-I9082
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 PRODUCT_COPY_FILES +=  \
-     vendor/slim/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip
+     vendor/slim/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
 
 
 # Inherit some common CM stuff.
