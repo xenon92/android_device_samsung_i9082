@@ -5,10 +5,15 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/samsung/i9082/i9082-vendor.mk)
 
-# Use high-density artwork where available
-PRODUCT_LOCALES += hdpi
-
+# Overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/i9082/overlay
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dexopt-cache-only=0 \
+    dalvik.vm.dexopt-data-only=1
+
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -106,6 +111,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # MTP
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
+
+# Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.zygote.disable_gl_preload=true \
+    ro.bq.gpu_to_cpu_unsupported=1 \
+
 
 # Dalvik heap config
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
