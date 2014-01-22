@@ -117,6 +117,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.zygote.disable_gl_preload=true \
     ro.bq.gpu_to_cpu_unsupported=1 \
 
+# Update Me OTA xml
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/updateme/i9082/update_me.xml:system/update_me.xml
 
 # Dalvik heap config
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
