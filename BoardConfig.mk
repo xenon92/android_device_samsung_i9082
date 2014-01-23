@@ -78,6 +78,10 @@ BOARD_RIL_CLASS := ../../../device/samsung/i9082/ril/
 # Assert
 TARGET_OTA_ASSERT_DEVICE := baffin,i9082,GT-I9082,I9082
 
+# Bootanimation improvement
+TARGET_BOOTANIMATION_PRELOAD := true
+TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/i9082/fstab.capri_ss_baffin
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
