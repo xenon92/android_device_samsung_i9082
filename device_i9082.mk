@@ -111,6 +111,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # MTP
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
+    
+# KSM
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ksm.default=1
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
