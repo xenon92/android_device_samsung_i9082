@@ -216,9 +216,6 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">7</integer>
 
-    <!-- Enable lockscreen translucent decor by default -->
+    <!-- Disable lockscreen translucent decor by default -->
     <bool name="config_enableLockScreenTranslucentDecor">true</bool>
-
-    <!-- Camera flash for Lightbulb app-->
-    <bool name="config_device_has_camera_flash">true</bool>
 </resources>
