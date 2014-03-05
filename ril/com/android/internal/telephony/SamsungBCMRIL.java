@@ -23,7 +23,7 @@ import android.os.AsyncResult;
 import android.os.Message;
 import android.os.Parcel;
 import android.os.SystemProperties;
-import android.util.Log;
+import android.telephony.Rlog;
 import com.android.internal.telephony.RILConstants;
 import java.util.Collections;
 import android.telephony.PhoneNumberUtils;
@@ -75,7 +75,7 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
         rr = findAndRemoveRequestFromList(serial);
 
         if (rr == null) {
-            Log.w(LOG_TAG, "Unexpected solicited response! sn: "
+            Rlog.w(RILJ_LOG_TAG, "Unexpected solicited response! sn: "
                             + serial + " error: " + error);
             return null;
         }
@@ -213,7 +213,7 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
             }} catch (Throwable tr) {
                 // Exceptions here usually mean invalid RIL responses
 
-                Log.w(LOG_TAG, rr.serialString() + "< "
+                Rlog.w(RILJ_LOG_TAG, rr.serialString() + "< "
                         + requestToString(rr.mRequest)
                         + " exception, possible invalid RIL response", tr);
 
@@ -289,7 +289,7 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
             // hack taken from smdk4210ril class
             voiceSettings = p.readInt();
             //printing it to cosole for later investigation
-            Log.d(LOG_TAG, "Samsung magic = " + voiceSettings);
+            Rlog.d(LOG_TAG, "Samsung magic = " + voiceSettings);
             dc.isVoicePrivacy = (0 != p.readInt());
             dc.number = p.readString();
             int np = p.readInt();
